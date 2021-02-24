@@ -1,0 +1,266 @@
+.mobileProjects
+    display: none
+.projects
+    margin-top: -35px
+    padding-top: 120px
+    padding-bottom: 80px
+    // background: url(../../img/projects/projects__bg.png)
+    background-size: cover
+    .btn
+        &-waves
+            margin-top: -7px
+            margin-left: -257px
+        &-wave
+            transform: translate(0, 16px)
+        &-glow
+            transform: translate(41px, 10px)
+        &-text
+            top: 30%
+            left: 19%
+            // left: 50%
+            // margin-left: -135px
+    &__title
+        // font-family: 'Quacker'
+        font-weight: 400
+        font-size: 75px
+    .row
+        margin-top: 30px
+        // display: flex
+    &__sizes
+        display: flex
+        justify-content: space-around
+        // max-width: 1000px
+        margin: auto
+        // display: flex
+        // flex-direction: column
+        // flex: 0 1 20%
+        // justify-content: space-between
+        flex-wrap: wrap
+        &Item
+            width: 15%
+            transition: all 0.5s
+            cursor: pointer
+            padding: 5px 20px
+            margin: 10px
+            display: inline-block
+            font-size: 35px
+            font-weight: 700
+            text-transform: uppercase
+            position: relative
+            background-image: none
+            color: #000
+            &Active
+                width: 15%
+                transition: all 0.5s
+                cursor: pointer
+                padding: 5px 20px
+                margin: 10px
+                display: inline-block
+                font-size: 35px
+                font-weight: 700
+                text-transform: uppercase
+                position: relative
+                background-image: none
+                color: #000
+                background-image: linear-gradient(#242527, #404143)
+                color: #fff
+    &__preview
+        position: relative
+        margin-top: 60px
+        display: flex
+        flex-wrap: wrap
+        &Img
+            transition: all 0.5s
+            cursor: pointer
+            width: 630px
+            height: 350px
+        &Choose
+            cursor: pointer
+            position: absolute
+            top: 0
+            left: 50px
+            height: 70px
+            width: 120px
+            // border: 1px solid #000
+            transform: rotate(4deg)
+            &:nth-child(2)
+                left: 45px
+                top: 71px
+            &:nth-child(3)
+                width: 130px
+                height: 76px
+                top: 166px
+                left: 30px
+                transform: rotate(4deg)
+            &:nth-child(4)
+                width: 130px
+                height: 80px
+                left: 27px
+                top: 262px
+                transform: rotate(5deg)
+            &:nth-child(5)
+                width: 142px
+                height: 85px
+                left: 170px
+                top: 260px
+                transform: none
+            &:nth-child(6)
+                width: 140px
+                height: 85px
+                left: 338px
+                top: 260px
+                transform: rotate(-3deg)
+            &:nth-child(7)
+                top: 258px
+                left: 490px
+                width: 130px
+                height: 80px
+                transform: rotate(-9deg)
+            &:nth-child(8)
+                width: 130px
+                height: 88px
+                top: 155px
+                left: 483px
+                transform: rotate(-10deg)
+            &:nth-child(9)
+                width: 125px
+                left: 476px
+                top: 70px
+                transform: rotate(-9deg)
+            &:nth-child(10)
+                width: 125px
+                top: 0
+                left: 464px
+                transform: rotate(-9deg)
+        &Desc
+            margin-left: 70px
+            &Title
+                line-height: 0.6
+                // font-family: 'Quacker'
+                font-weight: 400
+                font-size: 65px
+            &Plans
+                font-size: 20px
+                text-transform: uppercase
+                line-height: 1
+                &Title
+                    margin-top: 30px
+                    font-size: 30px
+                    font-weight: 700
+                &Basic
+                    margin-top: 30px
+                &Full
+                    margin-bottom: 60px
+            &Btn
+                line-height: 1.65
+                width: 240px
+                height: 60px
+                font-size: 15px
+    &__gallery
+        display: none
+        margin-top: 100px
+        &Title
+            font-size: 20px
+            text-transform: uppercase
+            font-weight: 500
+        &Slider
+            display: flex
+            align-items: center
+            &Prev
+                margin-right: 50px
+                width: 24px
+                height: 40px
+            &Next
+                margin-left: 50px
+                width: 24px
+                height: 40px
+
+@media screen and (max-width: 1200px)
+    .mobileProjects
+        padding-bottom: 100px
+        display: block
+        .btn
+            &-waves
+                margin-top: -42px
+                margin-left: -272px
+                transform: scale(0.99)
+            &-text
+                left: 17%
+                top: 23%
+        // .btn
+        //     &-text
+        //         left: 11%
+        //     &-waves
+        //         margin-top: -46px
+        .row
+            display: flex
+    .projects
+        display: none
+        &__title
+            font-size: 40px
+
+        &__sizes
+            margin-top: 10px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            &Item
+                margin-top: 5px
+                font-size: 15px
+        &__preview
+            &Desc
+                width: 100%
+                margin: auto
+                &Title
+                    display: none
+                &Plans
+                    font-size: 15px
+                    text-align: center
+                    &Title
+                        font-size: 20px
+                    &Basic
+                        margin-top: 10px
+
+@media screen and (max-width: 991px)
+    .projects
+        &__title
+            font-size: 50px
+        &__sizes
+            &Item
+                font-size: 15px
+        &__preview
+            &Desc
+                // width: 100%
+                margin: auto
+                &Title
+                    font-size: 50px
+                    text-align: center
+
+@media screen and (max-width: 767px)
+    &__title
+        font-size: 15px
+        .row
+            // display: flex
+        &__sizes
+            margin-top: 10px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            &Item
+                margin-top: 5px
+                font-size: 27px
+    .projects
+        &__preview
+            margin-top: 10px
+            &Desc
+                width: 100%
+                margin: auto
+                &Title
+                    display: none
+                &Plans
+                    font-size: 15px
+                    text-align: center
+                    &Title
+                        font-size: 20px
+                    &Basic
+                        margin-top: 10px
