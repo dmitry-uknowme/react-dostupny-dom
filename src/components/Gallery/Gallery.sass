@@ -1,3 +1,4 @@
+
 .mobileGallery
     display: none
 .gallery
@@ -29,28 +30,35 @@
         flex: 0 1 33.333%
         flex-wrap: wrap
         justify-content: space-around
+        // max-height: 560px
     &__unselectedImages
+        width: 440px
         display: flex
-        // flex-direction: column
-        &Row
-            display: flex
-            flex-direction: column
+        flex-direction: column
+        flex-wrap: wrap
+        height: 560px
         &Item
+            position: relative
+            width: 50%
             cursor: pointer
-            width: 220px
-            height: 140px
+            // width: 220px
+            height: 25%
+            // height: 140px
             margin: 0
             padding: 0
+
     &__selectedImage
         cursor: pointer
         transition: all 0.5s
         width: 920px
         height: 560px
         position: relative
+
         &Item
+            border-radius: 20px 20px 0 0
             margin-top: 5px
             width: 100%
-            height: 560px
+            height: 100%
     &__selectors
         cursor: pointer
         text-transform: uppercase
@@ -58,6 +66,7 @@
         font-weight: 700
         &Rock
             transition: all 0.5s
+            border-radius: 20px 0 20px 0
             z-index:
             line-height: 70px
             text-align: center
@@ -67,6 +76,12 @@
             color: #000
             position: absolute
             top: 0
+        &Rock._active
+            background: #4aca5a
+            color: #fff
+            border-radius: 20px 0 20px 0
+            width: 55%
+
         &Wood
             transition: all 0.5s
             border-radius: 0 20px 0 20px
@@ -74,18 +89,20 @@
             text-align: center
             color: #000
             height: 70px
-            width: 55%
+            width: 50%
             background: #d8d8d8
             position: absolute
             top: 0
             right: 0
-        &Active
+        &Wood._active
             background: #4aca5a
             color: #fff
-
+            border-radius: 0 20px 0 20px
+            width: 55%
     &__desc
+        margin: auto 0
         // background: url(../../img/gallery/gallery__bg.png)
-        height: 560px
+        // height: 560px
         &Row
             // margin-top: 20px
             display: flex
@@ -95,11 +112,13 @@
             display: flex
             flex-direction: column
             // flex-wrap: wrap
-            margin-left: 50px
             &Title
+                line-height: 3
                 text-align: left
                 font-size: 27px
                 font-weight: 700
+                &:first-child
+                    margin-top: 50px
             &Text
                 margin-left: 10px
                 text-align: left
@@ -121,10 +140,11 @@
             &Item
                 height: 444px
         &__unselectedImages
+            height: 444px
             &Item
                 cursor: pointer
                 // width: 176px
-                height: 112px
+                // height: 112px
         &__desc
             &Row
                 flex-direction: column
@@ -134,7 +154,7 @@
                 &Text
                     font-size: 15px
                 &Deadline
-                    margin-left: 50px
+                    // margin-left: 50px
             &Btn
                 font-size: 20px
 
@@ -143,6 +163,17 @@
         &__selectedImage
             width: 613px
             height: 500px
+        &__unselectedImages
+            width: 400px
+        &__desc
+            &Works
+                &Title
+                    margin-top: 0
+                    line-height: 1
+                    &:first-child
+                        margin-top: 0
+                &Deadline
+                    margin-left: 0
 
 @media screen and (max-width: 767px)
     .gallery
@@ -150,7 +181,7 @@
     .mobileGallery
         height: 900px
         margin-top: 30px
-        display: block
+        display: none
         .gallery__unselectedImagesItemm
             height: 80px
             width: 220px
@@ -211,8 +242,8 @@
                     margin: 0
                     margin-top: 10px
                     font-size: 10px
-                &Deadline
-                    margin-left: 120px
+                // &Deadline
+                //     margin-left: 120px
             &Btn
                 font-size: 10px
 
